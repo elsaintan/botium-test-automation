@@ -1,0 +1,30 @@
+# VariantCheckout_HappyPath
+
+me:
+Halo Official Elektronik2R, saya ingin memesan:
+
+Daftar Pesanan:
+
+- Pulpen Premium – Teman Setia untuk Setiap Ide (1x Biru): Rp 1.200
+- Pulpen Premium – Teman Setia untuk Setiap Ide (1x Hitam): Rp 700
+- Pulpen Premium – Teman Setia untuk Setiap Ide (1x Merah): Rp 1.000
+
+Subtotal: Rp 2.900
+Ongkos Kirim: Rp 7.100
+Total Pembayaran: Rp 10.000
+
+Data Pengiriman:
+ID: 115439724732791098847
+Nama: Testing Rara
+No. HP: 081246317609
+Email: katparra66@gmail.com
+Jasa Kirim: AnterAja - ECO
+Alamat: Jl. Letjen M.T. Haryono No.Kav 62, RT.2/RW.2, Pancoran, Kec. Pancoran, Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12780, Indonesia, PANCORAN, PANCORAN, JAKARTA SELATAN, DKI JAKARTA 12780
+
+Terima kasih.
+
+bot: Pesanan Berhasil Diterima!
+bot: Invoice Order
+bot: Silakan SCAN QRIS untuk melakukan pembayaran!
+bot: Pesanan kamu sudah berhasil dibuat!
+
