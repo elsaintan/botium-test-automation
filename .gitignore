@@ -1,3 +1,4 @@
 /node_modules
 /botiumwork
 chat.log
+.env

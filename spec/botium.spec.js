@@ -1,4 +1,5 @@
 const { BotDriver } = require('botium-core')
+require('dotenv').config()
 const fs = require('fs')
 const path = require('path')
 const Mocha = require('mocha')
@@ -19,6 +20,25 @@ describe('Sona Cycle Sales Project', function () {
     fs.writeFileSync(logFile, '')
 
     driver = new BotDriver()
+
+    if (process.env.API_URL) {
+      driver.setCapability('SIMPLEREST_URL', process.env.API_URL)
+    }
+    
+    if (process.env.PROJECT_NAME) {
+      driver.setCapability('PROJECTNAME', process.env.PROJECT_NAME)
+    }
+
+    const bodyTemplate = driver.caps['SIMPLEREST_BODY_TEMPLATE']
+    if (bodyTemplate) {
+      if (process.env.SESSION_ID) {
+        bodyTemplate.sessionId = process.env.SESSION_ID
+      }
+      if (process.env.PHONE_NUMBER && bodyTemplate.whatsapp) {
+        bodyTemplate.whatsapp.phone = process.env.PHONE_NUMBER
+      }
+      driver.setCapability('SIMPLEREST_BODY_TEMPLATE', bodyTemplate)
+    }
 
     container = await driver.Build()
 

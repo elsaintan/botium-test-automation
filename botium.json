@@ -1,19 +1,19 @@
 {
   "botium": {
     "Capabilities": {
-      "PROJECTNAME": "Sona Cycle Sales Project",
+      "PROJECTNAME": "",
       "CONTAINERMODE": "simplerest",
-      "SIMPLEREST_URL": "http://localhost:3002/chat/completions/18AjPfYRF7JesORwJf2_h",
+      "SIMPLEREST_URL": "",
       "SIMPLEREST_METHOD": "POST",
       "SIMPLEREST_HEADERS_TEMPLATE": {
         "Content-Type": "application/json"
       },
       "SIMPLEREST_BODY_TEMPLATE": {
         "content": "{{msg.messageText}}",
-        "sessionId": "whatsapp-6281246317609-18AjPfYRF7JesORwJf2_h",
+        "sessionId": "",
         "username": "QA Tester",
         "whatsapp": {
-          "phone": "6281246317609",
+          "phone": "",
           "originalMessageType": "text",
           "isGroup": false
         }
