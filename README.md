@@ -19,13 +19,22 @@ npm install
 
 ## Konfigurasi Botium
 
-Pengaturan koneksi chatbot dapat ditemukan dan diubah di dalam file `botium.json`.
-Secara default, proyek ini menggunakan profil `simplerest` untuk melakukan HTTP POST request ke API chatbot.
+Pengaturan koneksi chatbot menggunakan *environment variables* yang didefinisikan di dalam file `.env`. Anda perlu membuat file `.env` di root direktori proyek ini (sejajar dengan `package.json`) dan mengisi nilai-nilai berikut:
 
-Beberapa pengaturan penting di `botium.json`:
-- `SIMPLEREST_URL`: URL endpoint chatbot (contoh: `http://localhost:3002/chat/completions/...`)
-- `SIMPLEREST_METHOD`: HTTP Method yang digunakan (biasanya `POST`)
-- `SIMPLEREST_BODY_TEMPLATE`: Format JSON dari body request yang akan dikirim ke API chatbot. Anda dapat memodifikasinya sesuai kebutuhan chatbot Anda. Pesan dari Botium akan disisipkan di bagian `{{msg.messageText}}`.
+```env
+API_URL=http://localhost:3000/chat/completions/<YOUR_ENDPOINT_ID>
+SESSION_ID=whatsapp-<PHONE_NUMBER>-<SESSION_ID>
+PHONE_NUMBER=628xxxxxx
+PROJECT_NAME=Nama Proyek Anda
+```
+
+Keterangan:
+- `API_URL`: URL endpoint chatbot yang akan diuji.
+- `SESSION_ID`: ID Sesi obrolan unik yang diperlukan oleh backend chatbot Anda.
+- `PHONE_NUMBER`: Nomor telepon akun dummy yang digunakan untuk *testing*.
+- `PROJECT_NAME`: Nama proyek Botium Anda.
+
+*(Catatan: Konfigurasi tingkat lanjut tentang struktur request payload HTTP POST masih dapat dimodifikasi di `botium.json` jika diperlukan.)*
 
 ## Cara Membuat Test Case
 
@@ -54,8 +63,8 @@ Ongkos Kirim: Rp 7.100
 Total Pembayaran: Rp 8.300
 
 Data Pengiriman:
-Nama: Testing Rara
-No. HP: 081246317609
+Nama: Nama Tester
+No. HP: 08xxxxxxx
 
 bot: Pesanan Berhasil Diterima!
 bot: Invoice Order
